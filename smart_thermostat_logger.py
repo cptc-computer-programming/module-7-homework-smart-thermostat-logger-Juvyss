@@ -47,5 +47,9 @@ for temps in range (1,times_to_loop):
 average_temp = temp_reading_for_avg / times_to_loop
 
 # The summary.
-
+print("Smart Thermostat Summary")
+print("------------------------")
+print("Average temperature: ", average_temp)
+print("Readings below comfort range: ", too_cold_counter)
+print("Readings above comfort range: ", too_warm_counter)
 
