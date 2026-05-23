@@ -35,16 +35,16 @@ for temps in range (1,times_to_loop):
         user_temp_reading = int(input("Please reenter a new temperature: "))
 
     # Incrementing temp avg.
-    temp_reading_for_avg =+ user_temp_reading
+    temp_reading_for_avg += user_temp_reading
 
     # Start of the if statement to determine if its warm or cold and then incrementing those values.
     if user_temp_reading > WARM_LIMIT:
-        too_warm_counter =+ 1
+        too_warm_counter += 1
     elif user_temp_reading < COLD_LIMIT:
-        too_cold_counter =+ 1
+        too_cold_counter += 1
 
 # Calculating the average temp.
-average_temp = temp_reading_for_avg / times_to_loop
+average_temp = temp_reading_for_avg / user_number_of_readings
 
 # The summary.
 print("Smart Thermostat Summary")
