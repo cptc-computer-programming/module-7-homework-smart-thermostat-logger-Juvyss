@@ -26,11 +26,20 @@ for temps in range (1,times_to_loop):
 
     # User validation.
     while user_temp_reading > MAX_VALID_TEMP or user_temp_reading < MIN_VALID_TEMP:
-         user_temp_reading = int(input("That is not a valid entry. Using whole numbers, please enter a temperture(between 40 and 100 degrees inclusive): "))
-    
+        print("ERROR: That is not a valid entry. Temperature must be between 40 and 100 degrees inclusive.")
+        user_temp_reading = int(input("Please reenter a new temperature: "))
+
     # Incrementing temp avg.
     temp_reading_for_avg =+ user_temp_reading
 
     # Start of the if statement to determine if its warm or cold and then incrementing those values.
     if user_temp_reading > WARM_LIMIT:
+        too_warm_counter =+ 1
+    elif user_temp_reading < COLD_LIMIT:
+        too_cold_counter =+ 1
+
+# Calculating the average temp.
+average_temp = temp_reading_for_avg / times_to_loop
+
+#
 
