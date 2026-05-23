@@ -16,6 +16,11 @@ too_warm_counter = 0
 
 # These are my user inputs for how many time they want to loop.
 user_number_of_readings = int(input("How many times would you like to input a reading?"))
+# Validating readings count is positive.
+while user_number_of_readings <= 0:
+    print ("Error: The number of readings must be greater than 0.")
+    user_number_of_readings = int(input("How many times would you like to input a reading?"))
+# Setting times to loop.  
 times_to_loop = user_number_of_readings + 1
 
 
@@ -41,5 +46,6 @@ for temps in range (1,times_to_loop):
 # Calculating the average temp.
 average_temp = temp_reading_for_avg / times_to_loop
 
-#
+# The summary.
+
 
